@@ -3,6 +3,7 @@
 
 using namespace std;
 int main() {
+begining:
     int initial_num;
     const char* mode;
 cout << "Welcome to the calculator\n";
@@ -18,6 +19,7 @@ cout << "You have chosen the " << mode << " mode\n";
 double first_numb;
 double second_numb;
 double solution;
+string again;
 
 if (mode == "addition"){
     cout << "Please enter in your initial number ";
@@ -50,5 +52,23 @@ if (mode == "divison"){
     cin >> second_numb;
     solution = first_numb / second_numb;
     cout << "The awnser to " << first_numb << "/" << second_numb << " is " << solution << ".\n";}
+
+ending:
+cout << "Would you like to continue calculating (y/n) ";
+cin >> again;
+
+if (again == "Y", again == "y"){
+    goto begining;
+}
+
+if (again == "n", again == "N"){
+    cout << "See you next time!\n";
+    return 0;
+}
+
+if (again != "Y", again != "y", again != "N", again !="n"){
+    cout << "Please enter y/n\n";
+        goto ending;
+}
 
 }
